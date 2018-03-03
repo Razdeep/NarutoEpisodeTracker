@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Naruto Episode Tracker"
+        android:text="For Hidden Leaf Ninjas"
         android:textAlignment="center"
         android:textSize="30dp"
         android:padding="20sp"/>
@@ -22,27 +22,39 @@
         android:textAlignment="center"
         android:textSize="20dp"
         android:padding="20sp"/>
+    <TextView
+        android:id="@+id/number_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="50sp">
         <Button
+            android:id="@+id/update_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Update"/>
         <Button
+            android:id="@+id/rectify_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Rectify"/>
         <Button
+            android:id="@+id/set_btn"
             android:text="set explicitly"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <Button
+            android:id="@+id/about_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Credits"/>
+            android:text="About"/>
     </LinearLayout>
 
 </LinearLayout>

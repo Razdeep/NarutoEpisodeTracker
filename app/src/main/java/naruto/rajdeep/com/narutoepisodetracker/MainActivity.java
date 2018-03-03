@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             file = openFileOutput(fileName, Context.MODE_PRIVATE);
             file.write(value);
             file.close();
+            fetchData();
         } catch (FileNotFoundException e1) {
             e1.printStackTrace();
         } catch (IOException e1) {

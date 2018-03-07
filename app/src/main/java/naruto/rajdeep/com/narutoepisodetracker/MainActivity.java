@@ -14,32 +14,34 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
     TextView numberField;
-    Button updateBtn,rectifyBtn,setBtn,aboutBtn;
+    Button updateBtn, rectifyBtn, setBtn, aboutBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        numberField=findViewById(R.id.number_field);
-        updateBtn=findViewById(R.id.update_btn);
-        rectifyBtn=findViewById(R.id.rectify_btn);
-        aboutBtn=findViewById(R.id.about_btn);
+        numberField = findViewById(R.id.number_field);
+        updateBtn = findViewById(R.id.update_btn);
+        rectifyBtn = findViewById(R.id.rectify_btn);
+        aboutBtn = findViewById(R.id.about_btn);
         fetchData();
         updateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                update(fetchData()+1);
+                update(fetchData() + 1);
             }
         });
         rectifyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                update(fetchData()-1);
+                update(fetchData() - 1);
             }
         });
 
     }
+
     private int fetchData() {
-        int temp=-1;
+        int temp = -1;
         String fileName = "record.txt";
 
         try {
@@ -65,9 +67,10 @@ public class MainActivity extends AppCompatActivity {
         }
         return temp;
     }
-        private void update(int value){
-        String fileName="record.txt";
-        FileOutputStream file= null;
+
+    private void update(int value) {
+        String fileName = "record.txt";
+        FileOutputStream file = null;
         try {
 
             file = openFileOutput(fileName, Context.MODE_PRIVATE);
